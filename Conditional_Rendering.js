@@ -11,24 +11,8 @@ state={
   ],
   showPersons:true
 }
-switchNameHandler=(event)=>{
-  
-  let people=this.state.persons.filter((person)=>(person.name!=='Riship'))
-  console.log(people)
-  this.setState({
-    persons:[...people,
-    { name : 'Lovish' , age : 24 }
-  ]
-  })
-}
-onChangeHandler=(event)=>{
-  let val =event.target.value
-  this.setState({
-    persons:[
-      { name : val , age : '24' }
-    ]
-  })
-}
+
+
 onToggle=()=>{
   const show=this.state.showPersons;
   this.setState({
@@ -54,7 +38,7 @@ onToggle=()=>{
       <Person 
         name={this.state.persons[2].name}
         age={this.state.persons[2].age}/> */}
-      <button onClick={this.onToggle}> Switch name </button> 
+      <button onClick={this.onToggle}> Render on condition </button> 
       </div>
     );
   }
