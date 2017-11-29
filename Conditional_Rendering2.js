@@ -21,7 +21,7 @@ onToggle=()=>{
   render() {
     const { persons, showPersons } = this.state;
     let showCase = null;
-    if(this.state.showPersons){
+    if(showPersons){
      showCase  =  (
           persons.map(person=>(
             <Person name={person.name} age = {person.age}/>
